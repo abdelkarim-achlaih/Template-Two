@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
-  
+  --mainColor: #00c7fc;
+  --mainTransitionDuration: 0.3s;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -16,6 +17,7 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #1f2021;
 }
 ul {
   list-style: none;
@@ -48,3 +50,93 @@ ul {
 /* Start Global Components */
 
 /* End Global Components */
+/* Start Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 99px;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 30px);
+  bottom: 0;
+  left: 15px;
+  background-color: #726f71;
+}
+header .container nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .container nav .toogle-menu {
+  font-size: 22px;
+  color: white;
+  display: none;
+}
+header .container nav ul{
+  display: flex;
+}
+header .container nav ul li a {
+  display: block;
+  padding: 40px 10px;
+  text-decoration: none;
+  color: white;
+  transition-duration: var(--mainTransitionDuration);
+}
+header .container nav ul li a:hover,
+header .container nav ul li .active {
+  color: var(--mainColor);
+  border-bottom: 1px solid var(--mainColor);
+  position: relative;
+  z-index: 2;
+}
+header .container nav .form {
+  width: 40px;
+  height: 30px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  border-left: white 1px solid;
+  position: relative;
+}
+header .container nav .form i {
+  color: white;
+  position: absolute;
+  right: 0;
+  transition: var(--mainTransitionDuration);
+}
+header .container nav .form i:hover{
+  color: var(--mainColor);
+}
+@media (max-width: 767px) {
+  header .container nav ul {
+    display: none;
+  }
+  header .container nav .toogle-menu {
+    display: block;
+  }
+  header .container nav .toogle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+    width: 100%;
+  }
+  header .container nav .toogle-menu:hover + ul li a {
+    padding: 15px;
+  }
+}
+/* End Header */
