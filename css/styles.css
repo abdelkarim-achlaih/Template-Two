@@ -200,6 +200,9 @@ header .container nav .form i:hover{
   color: white;
   z-index: 3;
 }
+.landing .angle:hover {
+  color: var(--mainColor);
+}
 .landing .angle:first-of-type {
   left: 30px;
 }
@@ -225,6 +228,10 @@ header .container nav .form i:hover{
   border: white 1px solid;
   width: 20px;
   height: 20px;
+}
+.landing ul li:hover {
+  background-color: var(--mainColor);
+  border: solid 1px var(--mainColor);
 }
 .landing ul .active {
   border: var(--mainColor) 1px solid;
