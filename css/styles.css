@@ -2,6 +2,8 @@
 :root {
   --mainColor: #00c7fc;
   --mainTransitionDuration: 0.3s;
+  --mainTextColor: #1f2021;
+  --secondTextColor: #a8a8a8;
   --secondColor: rgba(15, 115, 143, 0.7);
 }
 /* End Variables */
@@ -18,7 +20,6 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #1f2021;
 }
 ul {
   list-style: none;
@@ -49,7 +50,51 @@ ul {
 }
 /* End Global Rules */
 /* Start Global Components */
-
+.main-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+.main-heading h2 {
+  width: fit-content;
+  display: block;
+  font-size: 30px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--mainTextColor);
+}
+.main-heading h2::after,
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-heading h2::before {
+  width: 80%;
+  background-color: var(--mainTextColor);
+  height: 1px;
+}
+.main-heading h2::after {
+  transform: translateX(-50%) translateY(50%);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--mainTextColor);
+  background-color: white;
+}
+.main-heading p {
+  width: 550px;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--secondTextColor);
+}
 /* End Global Components */
 /* Start Header */
 header {
@@ -238,3 +283,6 @@ header .container nav .form i:hover{
   background-color: var(--mainColor);
 }
 /* End Landing Section */
+/* Start Services Section */
+
+/* End Services Section */
