@@ -5,6 +5,7 @@
   --mainTextColor: #1f2021;
   --secondTextColor: #a8a8a8;
   --secondColor: rgba(15, 115, 143, 0.7);
+  --sectionPadding: 100px;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -54,7 +55,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding-bottom: 50px;
 }
 .main-heading h2 {
   width: fit-content;
@@ -88,7 +89,7 @@ ul {
   background-color: white;
 }
 .main-heading p {
-  width: 550px;
+  max-width: 550px;
   text-align: center;
   margin-top: 20px;
   line-height: 1.8;
@@ -284,5 +285,40 @@ header .container nav .form i:hover{
 }
 /* End Landing Section */
 /* Start Services Section */
-
+.services {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+.services .services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
+}
+.services .services-container .service {
+  display: flex;
+  gap: 60px;
+}
+.services .services-container .service .service-text h3 {
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--mainColor);
+  margin-bottom: 20px;
+}
+.services .services-container .service .service-text p {
+  color: var(--secondTextColor);
+  line-height: 1.7;
+}
+@media (max-width: 767px) {
+  .services .services-container {
+    padding: 50px;
+    grid-template-columns: 1fr;
+  }
+  .services .services-container .service {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
 /* End Services Section */
