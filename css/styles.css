@@ -591,10 +591,145 @@ header .container nav .form i:hover{
   margin: 20px;
 }
 @media (max-width: 767px) {
-  .stats .container .box:not(.box:last-child) {
+  .stats .container .box {
     padding-bottom: 25px;
     padding-top: 25px;
+  }
+  .stats .container .box:not(.box:last-child) {
     border-bottom: 1px solid white;
   }
 }
 /* End Stats Section */
+/* Start Skills Section */
+.skills {
+
+}
+.skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills .container > div {
+  text-align: center;
+  flex-basis: 45%;
+}
+.skills .container > div > h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  color: var(--mainTextColor);
+}
+.skills .container > div > p {
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--secondTextColor);
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+.skills .container .testimonials .box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.skills .container .testimonials .box img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+.skills .container .testimonials .box .content {
+  text-align: left;
+  font-size: 13px;
+  border-bottom: 1px solid var(--secondTextColor);
+}
+.skills .container .testimonials .box .content .text {
+  line-height: 2;
+  color: var(--mainTextColor);
+  margin-bottom: 20px;
+}
+.skills .container .testimonials .box .content .name {
+  text-align: right;
+  font-style: italic;
+  color: var(--secondTextColor);
+  margin-bottom: 10px;
+}
+.skills .container .testimonials .bullets {
+  width: 100px;
+  display: flex;
+  margin: auto auto 50px;
+  justify-content: space-between;
+}
+.skills .container .testimonials .bullets li {
+  border-radius: 50%;
+  border: var(--secondTextColor) 1px solid;
+  width: 20px;
+  height: 20px;
+}
+.skills .container .testimonials .bullets li:hover {
+  background-color: var(--mainColor);
+  border: solid 1px var(--mainColor);
+}
+.skills .container .testimonials .bullets .active {
+  border: var(--mainColor) 1px solid;
+  background-color: var(--mainColor);
+}
+@media (max-width: 991px) {
+  .skills .container {
+    justify-content: center;
+  }
+  .skills .container > div {
+    flex-basis: 80%;
+  }
+  .skills .container .testimonials .box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .skills .container .testimonials .box img {
+    margin: auto auto 25px;
+  }
+  .skills .container .testimonials .box .content .text {
+    text-align: center;
+  }
+}
+.skills .container .our-skills .progress-container .progress h4 {
+  font-size: 13px;
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.skills .container .our-skills .progress-container .progress .prog {
+  width: 100%;
+  height: 30px;
+  background-color: var(--secondTextColor);
+}
+.skills .container .our-skills .progress-container .progress:not(.progress:last-child) {
+  margin-bottom: 35px;
+}
+.skills .container .our-skills .progress-container .progress .prog span {
+  background-color: var(--mainColor);
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.skills .container .our-skills .progress-container .progress .prog span::before {
+  content: attr(data-prog);
+  background-color: var(--mainTextColor);
+  position: absolute;
+  right: 0;
+  top: -40px;
+  transform: translateX(50%);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+.skills .container .our-skills .progress-container .progress .prog span::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  border-top-color: var(--mainTextColor);
+  right: 0;
+  top: -13px;
+  transform: translateX(50%);
+}
+/* End Skills Section */
