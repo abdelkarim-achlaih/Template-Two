@@ -601,9 +601,6 @@ header .container nav .form i:hover{
 }
 /* End Stats Section */
 /* Start Skills Section */
-.skills {
-
-}
 .skills .container {
   display: flex;
   flex-wrap: wrap;
@@ -733,3 +730,53 @@ header .container nav .form i:hover{
   transform: translateX(50%);
 }
 /* End Skills Section */
+/* Start Quote Section */
+.quote {
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  line-height: 2;
+  position: relative;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+.quote .container {
+  position: relative;
+  z-index: 2;
+}
+.quote .container q {
+  font-size: 25px;
+  position: relative;
+}
+.quote .container q::before,
+.quote .container q::after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f10e";
+  font-weight: 600;
+  font-size: 15px;
+  position: absolute;
+}
+.quote .container q::before {
+  left: -20px
+}
+.quote .container q::after {
+  right: -20px;
+}
+.quote .container .author {
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  .quote .container q {
+    font-size: 20px;
+  }
+}
+/* End Quote Section */
