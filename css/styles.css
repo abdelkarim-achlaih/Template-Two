@@ -385,3 +385,73 @@ header .container nav .form i:hover{
   margin-right: 30px;
 }
 /* End Design Section */
+/* Start Portfolio Section */
+.portfolio .container .shuffle {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.portfolio .container .shuffle li {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px;
+  transition-duration: var(--mainTransitionDuration);
+}
+.portfolio .container .shuffle .active,
+.portfolio .container .shuffle li:hover {
+  background-color: var(--mainColor);
+  color: white;
+}
+.portfolio .images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+@media (min-width: 1200px) {
+  .portfolio .images-container {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+.portfolio .images-container .image {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+.portfolio .images-container .image img {
+  max-width: 100%;
+  transition: var(--mainTransitionDuration);
+}
+.portfolio .images-container .image:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio .images-container .image .caption {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  transition: var(--mainTransitionDuration);
+}
+.portfolio .images-container .image:hover .caption {
+  bottom: 0;
+}
+.portfolio .images-container .image .caption h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.portfolio .images-container .image .caption p {
+  font-size: 13px;
+  color: var(--mainColor);
+}
+.portfolio .more {
+  background-color: var(--mainColor);
+  padding: 15px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+}
+/* End Portfolio Section */
