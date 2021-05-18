@@ -780,3 +780,110 @@ header .container nav .form i:hover{
   }
 }
 /* End Quote Section */
+/* Start Pricing Section */
+.pricing .container .plans-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--mainTextColor);
+}
+.pricing .container .plans-container .plan {
+  flex-basis: 70%;
+  margin-bottom: 30px;
+  text-align: center;
+  /* border: red 1px solid; */
+}
+.pricing .container .plans-container .plan .type {
+  font-size: 16px;
+  padding: 30px 0;
+  border-top: solid 1px var(--mainColor);
+  text-transform: uppercase;
+}
+.pricing .container .plans-container .plan .price {
+  font-size: 60px;
+  font-weight: 600;
+  padding: 0 0 30px;
+  border-bottom: solid 1px var(--mainColor);
+  position: relative;
+}
+.pricing .container .plans-container .plan .price::before {
+  content: '$';
+  font-size: 21px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -30px;
+}
+.pricing .container .plans-container .plan .price::after {
+  content: '/MO';
+  font-size: 13px;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+.pricing .container .plans-container .plan .features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--mainColor);
+}
+.pricing .container .plans-container .plan .features li {
+  font-size: 16px;
+  width: 150px;
+  padding: 20px;
+}
+.pricing .container .plans-container .plan .features li:not(li:last-child) {
+  border-bottom: 1px solid var(--mainColor);
+}
+.pricing .container .plans-container .plan .buy {
+  padding: 30px 0;
+}
+.pricing .container .plans-container .plan .buy a {
+  text-decoration: none;
+  color: var(--mainTextColor);
+  border: 1px solid var(--mainColor);
+  padding: 10px 20px;
+  transition-duration: var(--mainTransitionDuration);
+}
+.pricing .container .plans-container .plan .buy a:hover {
+  background-color: var(--mainColor);
+  color: white;
+}
+@media (min-width: 768px) {
+  .pricing .container .plans-container {
+    justify-content: space-evenly;
+  }
+  .pricing .container .plans-container .plan {
+    flex-basis: 40%;
+  }
+}
+@media (min-width: 992px) {
+  .pricing .container .plans-container {
+    justify-content: space-evenly;
+  }
+  .pricing .container .plans-container .plan {
+    flex-basis: 20%;
+  }
+}
+.pricing .container .contact-button {
+  margin-top: 50px;
+  text-align: center;
+}
+.pricing .container .contact-button p {
+  font-size: 20px;
+  color: var(--mainTextColor);
+  margin-bottom: 30px;
+}
+.pricing .container .contact-button a {
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 16px;
+  transition: var(--mainTransitionDuration);
+}
+.pricing .container .contact-button a:hover {
+  border: 1px solid var(--mainColor);
+  background-color: transparent;
+  color: var(--mainColor);
+}
+/* End Pricing Section */
