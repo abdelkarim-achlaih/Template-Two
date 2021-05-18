@@ -887,3 +887,106 @@ header .container nav .form i:hover{
   color: var(--mainColor);
 }
 /* End Pricing Section */
+/* Start Subscribe Section */
+.subscribe {
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+}
+.subscribe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+.subscribe .container {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  z-index: 2;
+}
+.subscribe .container form {
+  flex-basis: 60%;
+  display: flex;
+  margin-bottom: 30px;
+}
+.subscribe .container form .mail {
+  position: relative;
+  flex-basis: 80%;
+}
+.subscribe .container form .mail::before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0e0";
+  font-weight: 400;
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  transition-duration: var(--mainTransitionDuration);
+}
+.subscribe .container form .mail:hover::before {
+  color: var(--mainColor);
+}
+.subscribe .container form .mail input[type='mail'] {
+  padding: 20px 40px;
+  font-size: 13px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  border-right-width: 0;
+  position: relative;
+  width: 100%;
+  caret-color: var(--mainColor);
+}
+.subscribe .container form .mail input[type='mail']::placeholder {
+  color: white;
+}
+.subscribe .container form .mail input[type='mail']::selection {
+  color: var(--mainColor);
+}
+.subscribe .container form .mail input[type='mail']:hover {
+  border-color: var(--mainColor);
+}
+.subscribe .container form .submit input[type='submit'] {
+  background-color: var(--mainColor);
+  color: white;
+  font-size: 13px;
+  padding: 20px 20px;
+  outline: none;
+  border: 1px solid white;
+  border-left-width: 0;
+  transition-duration: var(--mainTransitionDuration);
+}
+.subscribe .container form .submit input[type='submit']:hover {
+  background-color: transparent;
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+  border-left-width: 1px;
+}
+.subscribe .container p {
+  font-size: 13px;
+  line-height: 2;
+  flex-basis: 30%;
+  color: white;
+}
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .subscribe .container form {
+    width: 80%;
+  }
+  .subscribe .container p {
+    text-align: center;
+  }
+}
+/* End Subscribe Section */
