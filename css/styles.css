@@ -1090,3 +1090,54 @@ header .container nav .form i:hover{
   }
 }
 /* End Contact Section */
+/* Start Footer */
+footer {
+  background-image: url(../images/footer.jpg);
+  background-size: cover;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+footer .container {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center
+}
+footer .container img {
+  margin: 20px auto 10px;
+}
+footer .container p:first-of-type {
+  margin: 10px auto 20px;
+  width: fit-content;
+  border-bottom: 1px solid white;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+footer .container .social-icons {
+  margin: 20px auto;
+  padding-top: 10px;
+  width: fit-content;
+}
+footer .container .social-icons i:not(:last-child) {
+  margin-right: 20px;
+}
+footer .container .copyright {
+  margin-top: 60px;
+  font-size: 15px;
+}
+footer .container .copyright span {
+  color: var(--mainColor);
+}
+/* End Footer */
