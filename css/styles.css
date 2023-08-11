@@ -397,6 +397,7 @@ header .container nav .form i:hover{
   font-size: 13px;
   padding: 10px;
   transition-duration: var(--mainTransitionDuration);
+  cursor: pointer;
 }
 .portfolio .container .shuffle .active,
 .portfolio .container .shuffle li:hover {
