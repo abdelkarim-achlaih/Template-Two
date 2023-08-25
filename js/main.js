@@ -19,3 +19,32 @@ words.forEach((word) => {
 		});
 	};
 });
+
+let landing = document.querySelector(".landing");
+let togglers = Array.from(document.querySelectorAll(".toogler"));
+let bullets = Array.from(document.querySelectorAll(".bullets li"));
+bullets.forEach((bullet) => {
+	bullet.onclick = (_) => {
+		bullets.forEach((bullet) => {
+			bullet.classList.remove("active");
+		});
+		bullet.classList.add("active");
+		landing.style.backgroundImage = `url(../images/landing${bullet.dataset.num}.jpg)`;
+	};
+});
+togglers[0].onclick = (_) => {
+	let activeBullet = document.querySelector(".bullets li.active");
+	if (activeBullet.previousElementSibling) {
+		activeBullet.classList.remove("active");
+		activeBullet.previousElementSibling.classList.add("active");
+		landing.style.backgroundImage = `url(../images/landing${activeBullet.previousElementSibling.dataset.num}.jpg)`;
+	}
+};
+togglers[1].onclick = (_) => {
+	let activeBullet = document.querySelector(".bullets li.active");
+	if (activeBullet.nextElementSibling) {
+		activeBullet.classList.remove("active");
+		activeBullet.nextElementSibling.classList.add("active");
+		landing.style.backgroundImage = `url(../images/landing${activeBullet.nextElementSibling.dataset.num}.jpg)`;
+	}
+};
