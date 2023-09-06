@@ -48,3 +48,11 @@ togglers[1].onclick = (_) => {
 		landing.style.backgroundImage = `url(../images/landing${activeBullet.nextElementSibling.dataset.num}.jpg)`;
 	}
 };
+
+gsap.from("nav", {
+	y: 200,
+	opacity: 0,
+	duration: 3,
+	ease: "bounce.out",
+});
+gsap.to()
