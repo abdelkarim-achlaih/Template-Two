@@ -49,10 +49,11 @@ togglers[1].onclick = (_) => {
 	}
 };
 
-gsap.from("nav", {
-	y: 200,
-	opacity: 0,
-	duration: 3,
-	ease: "bounce.out",
-});
-gsap.to()
+// let tween =
+document.querySelector(".logo").onmouseenter = (_) => {
+	gsap.to(".logo", {
+		scale: 1.5,
+		duration: 3,
+		ease: "bounce.out",
+	});
+};

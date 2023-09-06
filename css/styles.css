@@ -22,9 +22,21 @@ html {
 body {
 	font-family: "Open Sans", sans-serif;
 }
+.page {
+	position: relative;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
 section {
 	padding-top: var(--sectionPadding);
 	padding-bottom: var(--sectionPadding);
+	scroll-snap-align: start;
+}
+.page header,
+.page > div,
+.page footer {
+	scroll-snap-align: start;
 }
 ul {
 	list-style: none;
@@ -801,6 +813,9 @@ header .container nav .form i:hover {
 }
 /* End Quote Section */
 /* Start Pricing Section */
+.pricing {
+	min-height: 200vh;
+}
 .pricing .container .plans-container {
 	display: flex;
 	justify-content: center;
